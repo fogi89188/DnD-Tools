@@ -36,6 +36,12 @@ namespace DnDTools
                         {
                             break;
                         }
+                    case "clear":
+                    case "cl":
+                        {
+                            Console.Clear();
+                            break;
+                        }
                     case "end":
                         {
                             return;
