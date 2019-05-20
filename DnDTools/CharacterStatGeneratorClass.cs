@@ -65,7 +65,6 @@ namespace DnDTools
             int st5 = GenerateAStat();
             int st6 = GenerateAStat();
             sum = st1 + st2 + st3 + st4 + st5 + st6;
-            Console.WriteLine(sum);
             if (sum <= 70)
             {
                 GenerateAllStatsOnce();
