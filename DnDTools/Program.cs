@@ -9,9 +9,9 @@ namespace DnDTools
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             CharacterStatGeneratorClass cs = new CharacterStatGeneratorClass();
-            cs.GenerateAllStatsOnce();
+            cs.GenerateAllNTimes(15);
             Console.WriteLine(cs.ToString());
         }
     }

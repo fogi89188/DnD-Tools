@@ -65,10 +65,7 @@ namespace DnDTools
             int st5 = GenerateAStat();
             int st6 = GenerateAStat();
             sum = st1 + st2 + st3 + st4 + st5 + st6;
-            if (sum <= 70)
-            {
-                GenerateAllStatsOnce();
-            }
+
             stat1.Add(st1);
             stat2.Add(st2);
             stat3.Add(st3);
@@ -77,17 +74,23 @@ namespace DnDTools
             stat6.Add(st6);
         }
         public void GenerateAllNTimes(int rep){
-            repeat += rep;
-            GenerateAllStatsOnce();
+            repeat += rep - 1;
+            for(int i = 0; i < rep; i++)
+            {
+                GenerateAllStatsOnce();
+            }
         }
 
         public override string ToString()
         {
+            int sum = 0;
             StringBuilder sb = new StringBuilder();
             sb.Append("Stats:");
             for (int i = 0; i < repeat; i++)
             {
-                sb.Append($"\n| {stat1[i]} | {stat2[i]} | {stat3[i]} | {stat4[i]} | {stat5[i]} | {stat6[i]} |");
+                sum = stat1[i] + stat2[i] + stat3[i] + stat4[i] + stat5[i] + stat6[i];
+                sb.Append($"\n| {stat1[i]} | {stat2[i]} | {stat3[i]} | {stat4[i]} | {stat5[i]} | {stat6[i]} | - Sum: {sum}");
+                sum = 0;
             }
 
             return sb.ToString();
