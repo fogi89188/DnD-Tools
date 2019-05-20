@@ -5,3 +5,10 @@ C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.csprojResolveAssemblyReferenc
 C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.csproj.CoreCompileInputs.cache
 C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.exe
 C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.pdb
+C:\Users\Viki\DnD-Tools\DnDTools\bin\Debug\DnDTools.exe.config
+C:\Users\Viki\DnD-Tools\DnDTools\bin\Debug\DnDTools.exe
+C:\Users\Viki\DnD-Tools\DnDTools\bin\Debug\DnDTools.pdb
+C:\Users\Viki\DnD-Tools\DnDTools\obj\Debug\DnDTools.csprojAssemblyReference.cache
+C:\Users\Viki\DnD-Tools\DnDTools\obj\Debug\DnDTools.csproj.CoreCompileInputs.cache
+C:\Users\Viki\DnD-Tools\DnDTools\obj\Debug\DnDTools.exe
+C:\Users\Viki\DnD-Tools\DnDTools\obj\Debug\DnDTools.pdb

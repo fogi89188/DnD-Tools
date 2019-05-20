@@ -11,7 +11,8 @@ namespace DnDTools
         static void Main(string[] args)
         {
             CharacterStatGeneratorClass cs = new CharacterStatGeneratorClass();
-            cs.GenerateAStat(5);
+            cs.GenerateAllStatsOnce();
+            Console.WriteLine(cs.ToString());
         }
     }
 }

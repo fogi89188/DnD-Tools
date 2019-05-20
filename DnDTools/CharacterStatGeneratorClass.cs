@@ -9,37 +9,37 @@ namespace DnDTools
 {
     class CharacterStatGeneratorClass
     {
-        private int rand;
-        private int repeat = 0;
-        private List<int> stat1;
-        private List<int> stat2;
-        private List<int> stat3;
-        private List<int> stat4;
-        private List<int> stat5;
-        private List<int> stat6;
+        private int repeat = 1;
+        private static List<int> stat1 = new List<int>();
+        private static List<int> stat2 = new List<int>();
+        private static List<int> stat3 = new List<int>();
+        private static List<int> stat4 = new List<int>();
+        private static List<int> stat5 = new List<int>();
+        private static List<int> stat6 = new List<int>();
 
         public CharacterStatGeneratorClass()
         {
         }
+        
 
-        public List<int> Stat1 { get => stat1; set => stat1 = value; }
-        public List<int> Stat2 { get => stat2; set => stat2 = value; }
-        public List<int> Stat3 { get => stat3; set => stat3 = value; }
-        public List<int> Stat4 { get => stat4; set => stat4 = value; }
-        public List<int> Stat5 { get => stat5; set => stat5 = value; }
-        public List<int> Stat6 { get => stat6; set => stat6 = value; }
-
-        public int GenerateAStat(int stat)
+        public int GenerateAStat()
         {
             Random rand = new Random();
             List<int> miniStats = new List<int>();
-            miniStats.Add(rand.Next(7));
-            Thread.Sleep(5);
-            miniStats.Add(rand.Next(7));
-            Thread.Sleep(5);
-            miniStats.Add(rand.Next(7));
-            Thread.Sleep(5);
-            miniStats.Add(rand.Next(7));
+            Thread.Sleep(10);
+            miniStats.Add(rand.Next(6)+1);
+            Thread.Sleep(10);
+            miniStats.Add(rand.Next(6)+1);
+            Thread.Sleep(10);
+            miniStats.Add(rand.Next(6)+1);
+            Thread.Sleep(10);
+            miniStats.Add(rand.Next(6)+1);
+            Thread.Sleep(10);
+
+            for (int j = 0; j < miniStats.Count; j++)
+            {
+                Console.WriteLine(miniStats[j]);
+            }
 
             int i = 0;
             int temp = i;
@@ -60,6 +60,29 @@ namespace DnDTools
             }
             return sum;
         }
+        public void GenerateAllStatsOnce()
+        {
+            int sum = 0;
+            int st1 = GenerateAStat();
+            int st2 = GenerateAStat();
+            int st3 = GenerateAStat();
+            int st4 = GenerateAStat();
+            int st5 = GenerateAStat();
+            int st6 = GenerateAStat();
+            sum = st1 + st2 + st3 + st4 + st5 + st6;
+            Console.WriteLine(sum);
+            if (sum <= 70)
+            {
+                GenerateAllStatsOnce();
+            }
+            stat1.Add(st1);
+            stat2.Add(st2);
+            stat3.Add(st3);
+            stat4.Add(st4);
+            stat5.Add(st5);
+            stat6.Add(st6);
+        }
+
 
         public override string ToString()
         {
@@ -67,7 +90,7 @@ namespace DnDTools
             sb.Append("Stats:");
             for (int i = 0; i < repeat; i++)
             {
-                sb.Append($"\n{Stat1[i]} | {Stat2[i]} | {Stat3[i]} | {Stat4[i]} | {Stat5[i]} | {Stat6[i]}");
+                sb.Append($"\n| {stat1[i]} | {stat2[i]} | {stat3[i]} | {stat4[i]} | {stat5[i]} | {stat6[i]} |");
             }
 
             return sb.ToString();
