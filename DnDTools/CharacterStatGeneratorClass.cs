@@ -20,20 +20,20 @@ namespace DnDTools
         public CharacterStatGeneratorClass()
         {
         }
-        
+
 
         public int GenerateAStat()
         {
             Random rand = new Random();
             List<int> miniStats = new List<int>();
             Thread.Sleep(10);
-            miniStats.Add(rand.Next(6)+1);
+            miniStats.Add(rand.Next(6) + 1);
             Thread.Sleep(10);
-            miniStats.Add(rand.Next(6)+1);
+            miniStats.Add(rand.Next(6) + 1);
             Thread.Sleep(10);
-            miniStats.Add(rand.Next(6)+1);
+            miniStats.Add(rand.Next(6) + 1);
             Thread.Sleep(10);
-            miniStats.Add(rand.Next(6)+1);
+            miniStats.Add(rand.Next(6) + 1);
             Thread.Sleep(10);
 
             int i = 0;
@@ -75,6 +75,10 @@ namespace DnDTools
             stat4.Add(st4);
             stat5.Add(st5);
             stat6.Add(st6);
+        }
+        public void GenerateAllNTimes(int rep){
+            repeat += rep;
+            GenerateAllStatsOnce();
         }
 
         public override string ToString()
