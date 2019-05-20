@@ -57,14 +57,12 @@ namespace DnDTools
         }
         public void GenerateAllStatsOnce()
         {
-            int sum = 0;
             int st1 = GenerateAStat();
             int st2 = GenerateAStat();
             int st3 = GenerateAStat();
             int st4 = GenerateAStat();
             int st5 = GenerateAStat();
             int st6 = GenerateAStat();
-            sum = st1 + st2 + st3 + st4 + st5 + st6;
 
             stat1.Add(st1);
             stat2.Add(st2);
@@ -75,7 +73,8 @@ namespace DnDTools
         }
         public void GenerateAllNTimes(int rep){
             repeat += rep - 1;
-            for(int i = 0; i < rep; i++)
+            Console.WriteLine(repeat);
+            for(int i = 0; i < repeat; i++)
             {
                 GenerateAllStatsOnce();
             }
@@ -92,6 +91,7 @@ namespace DnDTools
                 sb.Append($"\n| {stat1[i]} | {stat2[i]} | {stat3[i]} | {stat4[i]} | {stat5[i]} | {stat6[i]} | - Sum: {sum}");
                 sum = 0;
             }
+            repeat = 1;
 
             return sb.ToString();
         }

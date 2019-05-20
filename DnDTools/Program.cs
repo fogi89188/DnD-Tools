@@ -18,7 +18,7 @@ namespace DnDTools
                 string[] commandArr = Console.ReadLine().Split().ToArray();
                 switch (commandArr[0])
                 {
-                    case "stat":
+                    case "stats":
                         {
                             try
                             {
