@@ -1,0 +1,7 @@
+C:\Users\Max\DnD-Tools\DnDTools\bin\Debug\DnDTools.exe.config
+C:\Users\Max\DnD-Tools\DnDTools\bin\Debug\DnDTools.exe
+C:\Users\Max\DnD-Tools\DnDTools\bin\Debug\DnDTools.pdb
+C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.csprojResolveAssemblyReference.cache
+C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.csproj.CoreCompileInputs.cache
+C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.exe
+C:\Users\Max\DnD-Tools\DnDTools\obj\Debug\DnDTools.pdb

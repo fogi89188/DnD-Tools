@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DnDTools
@@ -27,6 +28,38 @@ namespace DnDTools
         public List<int> Stat4 { get => stat4; set => stat4 = value; }
         public List<int> Stat5 { get => stat5; set => stat5 = value; }
         public List<int> Stat6 { get => stat6; set => stat6 = value; }
+
+        public int GenerateAStat(int stat)
+        {
+            Random rand = new Random();
+            List<int> miniStats = new List<int>();
+            miniStats.Add(rand.Next(7));
+            Thread.Sleep(5);
+            miniStats.Add(rand.Next(7));
+            Thread.Sleep(5);
+            miniStats.Add(rand.Next(7));
+            Thread.Sleep(5);
+            miniStats.Add(rand.Next(7));
+
+            int i = 0;
+            int temp = i;
+            int min = miniStats[i];
+            for (i = 0; i < miniStats.Count; i++)
+            {
+                if (miniStats[i] < min)
+                {
+                    min = miniStats[i];
+                    temp = i;
+                }
+            }
+            miniStats.RemoveAt(temp);
+            int sum = 0;
+            for (i = 0; i < miniStats.Count; i++)
+            {
+                sum += miniStats[i];
+            }
+            return sum;
+        }
 
         public override string ToString()
         {
