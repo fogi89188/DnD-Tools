@@ -36,11 +36,6 @@ namespace DnDTools
             miniStats.Add(rand.Next(6)+1);
             Thread.Sleep(10);
 
-            for (int j = 0; j < miniStats.Count; j++)
-            {
-                Console.WriteLine(miniStats[j]);
-            }
-
             int i = 0;
             int temp = i;
             int min = miniStats[i];
@@ -82,7 +77,6 @@ namespace DnDTools
             stat5.Add(st5);
             stat6.Add(st6);
         }
-
 
         public override string ToString()
         {
