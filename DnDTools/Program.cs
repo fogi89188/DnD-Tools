@@ -11,7 +11,7 @@ namespace DnDTools
     {
         static void Main(string[] args)
         {
-            Dictionary<string, int> initiative = new Dictionary<string, int>();
+            SortedDictionary<int, string> initiative = new SortedDictionary<int, string>();
             InitiativeTracker init = new InitiativeTracker(initiative);
 
             CharacterStatGeneratorClass cs = new CharacterStatGeneratorClass();
@@ -41,7 +41,18 @@ namespace DnDTools
                                 {
                                     case "add":
                                         {
+                                            Console.WriteLine("trying to add");
                                             init.Add(commandArr[2], int.Parse(commandArr[3]));
+                                            break;
+                                        }
+                                    case "display":
+                                        {
+                                            Console.WriteLine(init.ToString());
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Invalid Command...");
                                             break;
                                         }
                                 }

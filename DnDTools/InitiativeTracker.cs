@@ -8,16 +8,29 @@ namespace DnDTools
 {
     class InitiativeTracker
     {
-        Dictionary<string, int> initiative = new Dictionary<string, int>();
+        private SortedDictionary<int, string> initiative = new SortedDictionary<int, string>();
 
-        public InitiativeTracker(Dictionary<string, int> initiative)
+        public InitiativeTracker(SortedDictionary<int, string> initiative)
         {
             this.initiative = initiative;
         }
 
         public void Add(string name, int init)
         {
-            initiative.Add(name, init);
+            initiative.Add(init, name);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"Initiative:");
+            int i = 1;
+            foreach (var item in initiative)
+            {
+                sb.Append($"\n{i}: {item.Key} - {item.Value}");
+                i++;
+            }
+            return sb.ToString(); 
         }
     }
 }
